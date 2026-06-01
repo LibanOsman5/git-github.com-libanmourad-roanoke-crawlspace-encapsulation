@@ -1,0 +1,134 @@
+/* RANKRENT — roanokecrawlspacepros.com
+   Single static stylesheet. Mobile-first, no framework, fast. */
+:root{
+  --navy:#10243b;--navy2:#163251;--blue:#1f6feb;--blue-d:#1857c4;
+  --accent:#16a34a;--accent-d:#128a3e;--amber:#f59e0b;
+  --ink:#1a2330;--muted:#5b6b7e;--line:#e4e9f0;--bg:#f7f9fc;--white:#fff;
+  --radius:12px;--shadow:0 6px 24px rgba(16,36,59,.10);--wrap:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.2;color:var(--navy);font-weight:800;letter-spacing:-.02em}
+h1{font-size:2.1rem;margin-bottom:.6rem}
+h2{font-size:1.6rem;margin-bottom:1rem}
+h3{font-size:1.15rem;margin-bottom:.4rem}
+p{margin-bottom:1rem;color:var(--ink)}
+section{padding:56px 0}
+.muted{color:var(--muted)}
+@media(min-width:760px){h1{font-size:2.8rem}h2{font-size:2rem}section{padding:72px 0}}
+
+/* Top bar */
+.topbar{background:var(--navy);color:#cfe0f3;font-size:.86rem}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 20px;flex-wrap:wrap;gap:6px}
+.topbar a{color:#fff;font-weight:700}
+
+/* Header / nav */
+header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(16,36,59,.05)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:1.15rem}
+.brand .logo{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--navy));display:grid;place-items:center;color:#fff;font-weight:800}
+.nav nav{display:none;gap:24px}
+.nav nav a{color:var(--ink);font-weight:600}
+.nav .callbtn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:800}
+.nav .callbtn:hover{background:var(--accent-d);text-decoration:none}
+@media(min-width:900px){.nav nav{display:flex}}
+
+/* Hero */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 60%,#1d3e63 100%);color:#eaf2fb;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 380px at 80% -10%,rgba(31,111,235,.35),transparent)}
+.hero .wrap{position:relative;display:grid;gap:30px;padding-top:54px;padding-bottom:60px}
+.hero h1{color:#fff}
+.hero p.lede{font-size:1.15rem;color:#cfe0f3;max-width:560px}
+.hero .badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.badge{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);padding:7px 12px;border-radius:999px;font-size:.84rem;font-weight:700;color:#fff}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:11px;font-weight:800;font-size:1.02rem;border:0;cursor:pointer}
+.btn-call{background:var(--accent);color:#fff}
+.btn-call:hover{background:var(--accent-d);text-decoration:none}
+.btn-quote{background:#fff;color:var(--navy)}
+.btn-quote:hover{background:#eef3fa;text-decoration:none}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center}}
+
+/* Quote card */
+.quote-card{background:#fff;color:var(--ink);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+.quote-card h3{font-size:1.25rem}
+.quote-card form{display:grid;gap:12px;margin-top:12px}
+.quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:9px;font-size:1rem;font-family:inherit}
+.quote-card textarea{min-height:84px;resize:vertical}
+.quote-card button{width:100%}
+.formnote{font-size:.78rem;color:var(--muted);text-align:center}
+
+/* Trust strip */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:26px 20px;text-align:center}
+.trust .stat{font-size:1.7rem;font-weight:800;color:var(--blue)}
+.trust .lbl{font-size:.82rem;color:var(--muted);font-weight:600}
+@media(min-width:760px){.trust .wrap{grid-template-columns:repeat(4,1fr)}}
+
+/* Cards / services */
+.grid{display:grid;gap:20px}
+@media(min-width:680px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 2px 10px rgba(16,36,59,.04);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .ico{width:46px;height:46px;border-radius:10px;background:#e8f0fe;color:var(--blue);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
+.section-head{text-align:center;max-width:680px;margin:0 auto 36px}
+.section-head p{color:var(--muted)}
+.eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:6px}
+
+/* Why / list */
+.checklist{list-style:none;display:grid;gap:12px}
+.checklist li{display:flex;gap:11px;align-items:flex-start}
+.checklist li:before{content:"✓";color:var(--accent);font-weight:900;background:#e7f6ec;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;flex:0 0 24px;font-size:.85rem}
+.split{display:grid;gap:32px;align-items:center}
+@media(min-width:860px){.split{grid-template-columns:1fr 1fr}}
+
+/* Steps */
+.steps{counter-reset:s;display:grid;gap:18px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;position:relative}
+.step:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;width:34px;height:34px;background:var(--blue);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:800}
+
+/* CTA band */
+.cta-band{background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;text-align:center}
+.cta-band h2{color:#fff}
+.cta-band p{color:#dce9fb;max-width:620px;margin:0 auto 22px}
+
+/* FAQ */
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:0;margin-bottom:12px;overflow:hidden}
+.faq summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--navy);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";float:right;color:var(--blue);font-weight:800}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding:0 18px 16px;margin:0;color:var(--muted)}
+
+/* Service-area pills */
+.areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.area-pill{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-weight:600;color:var(--ink)}
+
+/* Footer */
+footer{background:var(--navy);color:#b9cbe0;padding:48px 0 24px;font-size:.92rem}
+footer h4{color:#fff;margin-bottom:12px;font-size:1rem}
+footer a{color:#cfe0f3}
+.footgrid{display:grid;gap:28px}
+@media(min-width:760px){.footgrid{grid-template-columns:2fr 1fr 1fr}}
+footer ul{list-style:none;display:grid;gap:8px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:18px;text-align:center;font-size:.82rem;color:#8ea7c2}
+
+/* Sticky mobile call bar */
+.mobilecall{position:fixed;bottom:0;left:0;right:0;z-index:60;display:flex;background:var(--accent);box-shadow:0 -4px 16px rgba(0,0,0,.18)}
+.mobilecall a{flex:1;text-align:center;color:#fff;font-weight:800;padding:14px;font-size:1.05rem}
+.mobilecall a.q{background:var(--navy)}
+@media(min-width:900px){.mobilecall{display:none}}
+body{padding-bottom:56px}
+@media(min-width:900px){body{padding-bottom:0}}
+
+.pagehead{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:48px 0}
+.pagehead h1{color:#fff}.pagehead p{color:#cfe0f3;max-width:640px}
+.breadcrumb{font-size:.84rem;color:#9fb6cf;margin-bottom:10px}
+.breadcrumb a{color:#cfe0f3}
