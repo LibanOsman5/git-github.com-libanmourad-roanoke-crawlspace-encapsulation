@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say voice="Polly.Joanna">You have reached Roanoke Crawl Space Pros. We are currently helping another customer. Please leave your name, phone number, and a brief message after the tone, and we will return your call within 15 minutes. You can also request a free estimate at roanoke crawl space pros dot com.</Say>
+    <Record
+        action="https://roanokecrawlspacepros.com/voicemail-thanks.xml"
+        method="GET"
+        maxLength="60"
+        finishOnKey="#"
+        playBeep="true"
+    />
+    <Say voice="Polly.Joanna">We did not receive your message. Please try again or visit roanoke crawl space pros dot com to request a free estimate online.</Say>
+</Response>
