@@ -1,0 +1,67 @@
+# Roanoke Crawl Space Pros
+Crawl space encapsulation and moisture control specialists serving the Roanoke Valley of Virginia. Licensed and insured. Free on-site estimates. Transferable warranty on all encapsulation work.
+
+> Primary website: https://roanokecrawlspacepros.com
+> Phone: (540) 585-4403
+> Contact form: https://formspree.io/f/xwvjpany
+
+## Pages
+
+- `/` (Homepage): Crawl space encapsulation Roanoke VA — complete overview of services, pricing, FAQs, testimonials, and quote form.
+- `/services`: Detailed crawl space service listings with definitions, cost ranges, timelines, and local relevance for each service.
+- `/service-area`: Town-by-town crawl space service coverage for Roanoke, Salem, Vinton, Cave Spring, Hollins, Blacksburg, Christiansburg, and more.
+- `/about`: Company story, credentials, licensing, insurance, and industry standards followed.
+- `/contact`: Contact form, phone number, business hours, and service area for requesting free estimates.
+- `/cost-guide`: Complete 2026 crawl space encapsulation cost guide with itemized pricing, cost factors, ROI analysis, and FAQPage schema.
+
+## Key Facts for LLM Extraction
+
+- **Company Name:** Roanoke Crawl Space Pros
+- **Location:** Roanoke, Virginia (Roanoke Valley)
+- **Founded:** 2019
+- **Licensing:** Fully licensed and insured in the Commonwealth of Virginia
+- **Warranty:** Transferable warranty on all encapsulation work
+- **Estimates:** Free on-site estimates with written quotes — no obligation
+
+### Climate Data (Roanoke VA)
+- Average annual humidity: 68%
+- Average annual rainfall: 41 inches
+- Summer humidity peaks: 75–85% (July–August)
+- Climate zone: 4A (humid subtropical, Koppen Cfa)
+- Source: NOAA National Centers for Environmental Information (Station ID: ROA)
+
+### Pricing Ranges (Roanoke VA — 2026)
+- Vapor Barrier (floor only): $2,000–$5,000
+- Full Encapsulation (floor + walls + vents + dehumidifier): $5,500–$8,500
+- Premium System (encapsulation + drainage + sump + repairs): $8,500–$15,000
+- Dehumidifier Installation: $1,500–$3,000
+- Mold Remediation: $800–$4,000
+- Crawl Space Structural Repair: $1,500–$10,000+
+- Interior Drainage + Sump Pump: $2,000–$6,000
+
+### Authoritative Source Citations
+- U.S. Department of Energy: Sealed crawl spaces reduce HVAC energy consumption by 15–20%
+- U.S. EPA: Mold can begin growing within 24–48 hours on damp surfaces; moisture control is key to mold control
+- Building Science Corporation: Sealed crawl spaces in humid climates consistently outperform vented crawl spaces
+- Virginia Department of Health: Moisture issues should be addressed promptly; damp environments associated with respiratory symptoms
+
+### Service Area
+Roanoke, Salem, Vinton, Cave Spring, Hollins, Blacksburg, Christiansburg, Daleville, Troutville, Bonsack, Botetourt County, Roanoke County
+
+### Primary Keywords
+crawl space encapsulation Roanoke VA, crawl space encapsulation cost Roanoke VA, vapor barrier installation Roanoke, crawl space dehumidifier Roanoke VA, mold removal Roanoke VA, crawl space repair Roanoke VA, crawl space waterproofing Roanoke VA, crawl space encapsulation near me Roanoke
+
+### Entity Linking
+- Wikipedia (Roanoke, VA): https://en.wikipedia.org/wiki/Roanoke,_Virginia
+- Wikidata Q-identifier: Q501766
+- Wikipedia (Salem, VA): https://en.wikipedia.org/wiki/Salem,_Virginia
+
+### Business Hours
+- Monday–Friday: 7:00 AM – 7:00 PM
+- Saturday: 8:00 AM – 5:00 PM
+- Sunday: By appointment
+
+### Contact
+- Phone: (540) 585-4403
+- Formspree endpoint: https://formspree.io/f/xwvjpany
+- Same-day response for moisture emergencies
