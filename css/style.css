@@ -2,7 +2,7 @@
    Single static stylesheet. Mobile-first, no framework, fast. */
 :root{
   --navy:#10243b;--navy2:#163251;--blue:#1f6feb;--blue-d:#1857c4;
-  --accent:#16a34a;--accent-d:#128a3e;--amber:#f59e0b;
+  --accent:#16a34a;--accent-d:#128a3e;--amber:#f59e0b;--red:#dc2626;
   --ink:#1a2330;--muted:#5b6b7e;--line:#e4e9f0;--bg:#f7f9fc;--white:#fff;
   --radius:12px;--shadow:0 6px 24px rgba(16,36,59,.10);--wrap:1120px;
 }
@@ -22,6 +22,12 @@ p{margin-bottom:1rem;color:var(--ink)}
 section{padding:56px 0}
 .muted{color:var(--muted)}
 @media(min-width:760px){h1{font-size:2.8rem}h2{font-size:2rem}section{padding:72px 0}}
+
+/* Emergency bar */
+.emergency-bar{background:var(--red);color:#fff;font-size:.88rem;text-align:center}
+.emergency-bar .wrap{padding:10px 20px}
+.emergency-bar a{color:#fff;text-decoration:underline;font-weight:800}
+.emergency-bar strong{color:#fff}
 
 /* Top bar */
 .topbar{background:var(--navy);color:#cfe0f3;font-size:.86rem}
@@ -48,7 +54,8 @@ header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-botto
 .hero .badges{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
 .badge{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);padding:7px 12px;border-radius:999px;font-size:.84rem;font-weight:700;color:#fff}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:11px;font-weight:800;font-size:1.02rem;border:0;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:11px;font-weight:800;font-size:1.02rem;border:0;cursor:pointer;transition:transform 160ms ease-out}
+.btn:active{transform:scale(0.97)}
 .btn-call{background:var(--accent);color:#fff}
 .btn-call:hover{background:var(--accent-d);text-decoration:none}
 .btn-quote{background:#fff;color:var(--navy)}
@@ -59,7 +66,8 @@ header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-botto
 .quote-card{background:#fff;color:var(--ink);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
 .quote-card h3{font-size:1.25rem}
 .quote-card form{display:grid;gap:12px;margin-top:12px}
-.quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:9px;font-size:1rem;font-family:inherit}
+.quote-card input,.quote-card select,.quote-card textarea{width:100%;padding:12px 13px;border:1px solid var(--line);border-radius:9px;font-size:1rem;font-family:inherit;transition:border-color .15s}
+.quote-card input:focus,.quote-card select:focus,.quote-card textarea:focus{border-color:var(--blue);outline:none;box-shadow:0 0 0 3px rgba(31,111,235,.12)}
 .quote-card textarea{min-height:84px;resize:vertical}
 .quote-card button{width:100%}
 .formnote{font-size:.78rem;color:var(--muted);text-align:center}
@@ -74,12 +82,17 @@ header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-botto
 /* Cards / services */
 .grid{display:grid;gap:20px}
 @media(min-width:680px){.grid.cols-2{grid-template-columns:repeat(2,1fr)}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 2px 10px rgba(16,36,59,.04);transition:transform .15s,box-shadow .15s}
-.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 2px 10px rgba(16,36,59,.04)}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .card .ico{width:46px;height:46px;border-radius:10px;background:#e8f0fe;color:var(--blue);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
 .section-head{text-align:center;max-width:680px;margin:0 auto 36px}
 .section-head p{color:var(--muted)}
 .eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:6px}
+
+/* Testimonials */
+.testimonial p{color:var(--ink)}
+.testimonial .stars{color:var(--amber);font-size:1rem;margin-bottom:10px;letter-spacing:.05em}
+.testimonial .author{font-weight:700;color:var(--navy);font-size:.88rem;margin-top:10px}
 
 /* Why / list */
 .checklist{list-style:none;display:grid;gap:12px}
@@ -100,16 +113,19 @@ header.nav{position:sticky;top:0;z-index:50;background:var(--white);border-botto
 .cta-band p{color:#dce9fb;max-width:620px;margin:0 auto 22px}
 
 /* FAQ */
-.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:0;margin-bottom:12px;overflow:hidden}
-.faq summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--navy);list-style:none}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:0;margin-bottom:12px;overflow:hidden;transition:box-shadow .15s}
+.faq details:hover{box-shadow:0 2px 12px rgba(16,36,59,.06)}
+.faq summary{cursor:pointer;padding:16px 18px;font-weight:700;color:var(--navy);list-style:none;transition:color .15s}
+.faq summary:hover{color:var(--blue)}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:after{content:"+";float:right;color:var(--blue);font-weight:800}
+.faq summary:after{content:"+";float:right;color:var(--blue);font-weight:800;font-size:1.1rem}
 .faq details[open] summary:after{content:"–"}
 .faq details p{padding:0 18px 16px;margin:0;color:var(--muted)}
 
 /* Service-area pills */
 .areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.area-pill{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-weight:600;color:var(--ink)}
+.area-pill{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-weight:600;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.area-pill:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(16,36,59,.08)}
 
 /* Footer */
 footer{background:var(--navy);color:#b9cbe0;padding:48px 0 24px;font-size:.92rem}
