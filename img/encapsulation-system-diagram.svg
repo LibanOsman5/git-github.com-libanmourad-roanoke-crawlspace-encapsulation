@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" role="img" font-family="system-ui,-apple-system,Segoe UI,Roboto,sans-serif" aria-label="Cutaway diagram of a crawl space encapsulation system showing sealed foundation vents, a 12-mil vapor barrier on the walls and floor, an energy-efficient dehumidifier, and an interior drainage and sump pump.">
+  <rect width="880" height="560" fill="#faf3e6"/>
+  <!-- sky label -->
+  <text x="40" y="40" fill="#6b5d4c" font-size="15" font-weight="600">Encapsulated crawl space system</text>
+  <line x1="40" y1="50" x2="240" y2="50" stroke="#c0673a" stroke-width="2"/>
+
+  <!-- soil -->
+  <rect x="0" y="212" width="880" height="240" fill="#e7d6bd"/>
+  <rect x="0" y="206" width="880" height="8" fill="#7c9a63"/>
+
+  <!-- house -->
+  <path d="M370 56 L120 160 H620 Z" fill="#c0673a"/>
+  <path d="M370 56 L120 160 H620 Z" fill="#000" opacity=".06"/>
+  <rect x="158" y="160" width="424" height="52" fill="#f3ead9"/>
+  <rect x="158" y="160" width="424" height="52" fill="none" stroke="#cdbfa8" stroke-width="2"/>
+  <rect x="352" y="178" width="32" height="34" fill="#234b33"/>
+  <rect x="214" y="176" width="40" height="26" fill="#cfe0d3" stroke="#234b33" stroke-width="1.5"/>
+  <rect x="486" y="176" width="40" height="26" fill="#cfe0d3" stroke="#234b33" stroke-width="1.5"/>
+
+  <!-- foundation block -->
+  <rect x="126" y="212" width="488" height="250" fill="#cdbfa8"/>
+  <rect x="126" y="212" width="488" height="250" fill="none" stroke="#b3a283" stroke-width="2"/>
+  <!-- crawl space void -->
+  <rect x="158" y="240" width="424" height="182" fill="#1f3128"/>
+
+  <!-- vapor barrier liner (cream) -->
+  <rect x="158" y="240" width="16" height="182" fill="#f3ead9"/>
+  <rect x="566" y="240" width="16" height="182" fill="#f3ead9"/>
+  <rect x="158" y="402" width="424" height="20" fill="#f3ead9"/>
+  <!-- clay seal seam -->
+  <polyline points="174,240 174,402 566,402 566,240" fill="none" stroke="#c0673a" stroke-width="3.5" stroke-linejoin="round"/>
+
+  <!-- dehumidifier -->
+  <rect x="250" y="352" width="64" height="50" rx="7" fill="#cfe0d3" stroke="#234b33" stroke-width="2"/>
+  <circle cx="282" cy="377" r="15" fill="#fff" stroke="#234b33" stroke-width="2"/>
+  <path d="M282 377 L282 364 M282 377 L293 383 M282 377 L271 383" stroke="#234b33" stroke-width="2" stroke-linecap="round"/>
+  <rect x="262" y="402" width="40" height="4" fill="#234b33" opacity=".5"/>
+
+  <!-- sealed vent on right wall -->
+  <rect x="582" y="250" width="26" height="20" fill="#9c8a6c"/>
+  <path d="M585 253 L605 267 M605 253 L585 267" stroke="#c0673a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- sump + drainage -->
+  <ellipse cx="520" cy="410" rx="34" ry="13" fill="#16241d"/>
+  <rect x="508" y="380" width="24" height="26" rx="3" fill="#234b33"/>
+  <line x1="520" y1="380" x2="520" y2="356" stroke="#234b33" stroke-width="3"/>
+  <line x1="520" y1="356" x2="560" y2="356" stroke="#234b33" stroke-width="3"/>
+
+  <!-- numbered markers -->
+  <g font-weight="800" font-size="15" fill="#fff" text-anchor="middle">
+    <g><circle cx="595" cy="260" r="14" fill="#c0673a"/><text x="595" y="265">1</text></g>
+    <g><circle cx="566" cy="320" r="14" fill="#c0673a"/><text x="566" y="325">2</text></g>
+    <g><circle cx="282" cy="345" r="14" fill="#c0673a"/><text x="282" y="350">3</text></g>
+    <g><circle cx="520" cy="424" r="14" fill="#c0673a"/><text x="520" y="429">4</text></g>
+  </g>
+
+  <!-- legend -->
+  <g font-size="15.5" fill="#3a3026">
+    <g><circle cx="150" cy="492" r="13" fill="#c0673a"/><text x="150" y="497" fill="#fff" font-weight="800" font-size="14" text-anchor="middle">1</text><text x="172" y="497" font-weight="600">Sealed foundation vents</text></g>
+    <g><circle cx="470" cy="492" r="13" fill="#c0673a"/><text x="470" y="497" fill="#fff" font-weight="800" font-size="14" text-anchor="middle">2</text><text x="492" y="497" font-weight="600">12-mil vapor barrier, walls + floor</text></g>
+    <g><circle cx="150" cy="528" r="13" fill="#c0673a"/><text x="150" y="533" fill="#fff" font-weight="800" font-size="14" text-anchor="middle">3</text><text x="172" y="533" font-weight="600">Dehumidifier holds humidity below 50%</text></g>
+    <g><circle cx="470" cy="528" r="13" fill="#c0673a"/><text x="470" y="533" fill="#fff" font-weight="800" font-size="14" text-anchor="middle">4</text><text x="492" y="533" font-weight="600">Interior drainage + sump pump</text></g>
+  </g>
+</svg>
