@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B16R8VX7GX"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-B16R8VX7GX');
+</script>
 <title>Crawl Space Encapsulation Roanoke VA | Free Estimates — Roanoke Crawl Space Pros</title>
 <meta name="description" content="Professional crawl space encapsulation in Roanoke VA. Stop moisture, mold, and structural damage with a sealed, dry crawl space system. Free on-site estimates in Roanoke, Salem, Vinton, Cave Spring, Hollins, Blacksburg, Christiansburg and the Roanoke Valley. Call (540) 585-4403.">
 <link rel="canonical" href="https://roanokecrawlspacepros.com/">
@@ -449,12 +455,11 @@
   els.forEach(function(e){io.observe(e);});
 })();
 </script>
-<!-- Analytics: paste your GA4 tag here to track leads & calls.
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');
-document.querySelectorAll('[data-evt="call"]').forEach(function(a){a.addEventListener('click',function(){gtag('event','call_click')})});
-var lf=document.querySelector('[data-evt="lead"]');if(lf)lf.addEventListener('submit',function(){gtag('event','generate_lead')});
+<script>
+/* GA4 lead events: phone taps + form submits */
+(function(){if(typeof gtag!=='function')return;
+document.querySelectorAll('a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(){gtag('event','call_click',{transport_type:'beacon'});});});
+document.querySelectorAll('form[action*="formspree"]').forEach(function(f){f.addEventListener('submit',function(){gtag('event','generate_lead',{transport_type:'beacon'});});});})();
 </script>
--->
 </body>
 </html>
