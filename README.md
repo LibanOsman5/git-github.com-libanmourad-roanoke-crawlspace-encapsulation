@@ -55,3 +55,4 @@ Crawl space encapsulation and moisture control serving Roanoke, Salem, Vinton, a
 | FAQ questions | 5 | 6 (GEO-optimized) |
 | Content sections | 7 | 10 (+ testimonials, + pricing, + emergency) |
 | EEAT signals | 3 | 9+ (DOE stats, material specs, process detail, local climate data) |
+
