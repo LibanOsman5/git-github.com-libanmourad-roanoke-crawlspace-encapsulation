@@ -2,6 +2,14 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.roanokecrawlspacepros.com" }],
+      "destination": "https://roanokecrawlspacepros.com/$1",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/css/(.*)",
