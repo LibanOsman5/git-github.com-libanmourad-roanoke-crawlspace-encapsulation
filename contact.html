@@ -187,9 +187,29 @@ gtag('js',new Date());gtag('config','G-B16R8VX7GX');
 </div><div class="foot-bottom">&copy; 2026 Roanoke Crawl Space Pros &middot; Roanoke, VA &middot; <a href="/contact">Contact</a> &middot; Licensed &amp; Insured</div></div></footer>
 <div class="mobilecall"><a href="tel:+154****4403">Call Now</a><a class="q" href="/contact">Free Quote</a></div>
 <script>
-/* GA4 lead events: phone taps + form submits */
-(function(){if(typeof gtag!=='function')return;
-document.querySelectorAll('a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(){gtag('event','call_click',{transport_type:'beacon'});});});
-document.querySelectorAll('form[action*="formspree"]').forEach(function(f){f.addEventListener('submit',function(){gtag('event','generate_lead',{transport_type:'beacon'});});});})();
+/* GA4 lead events: phone taps + form submits — fires reliably even during navigation */
+(function(){
+  var DL=window.dataLayer||[];
+  window.dataLayer=DL;
+
+  function fire(name){
+    DL.push({event:name});
+    if(typeof gtag==='function'){gtag('event',name,{transport_type:'beacon'});}
+  }
+
+  function bind(){
+    var phones=document.querySelectorAll('a[href^="tel:"]');
+    for(var i=0;i<phones.length;i++){
+      phones[i].addEventListener('click',function(){fire('call_click');});
+    }
+    var forms=document.querySelectorAll('form[action*="formspree"]');
+    for(var j=0;j<forms.length;j++){
+      forms[j].addEventListener('submit',function(){fire('generate_lead');});
+    }
+  }
+
+  bind();
+  setTimeout(bind,2000);
+})();
 </script>
 </body></html>
