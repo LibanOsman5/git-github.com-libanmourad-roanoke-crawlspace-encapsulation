@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flip Card Demo — RankRent Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/flip-card.css">
+<style>
+  body {
+    margin: 0;
+    padding: 2rem;
+    background: #f5f0e8;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+  .demo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .demo-title {
+    text-align: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.5rem;
+    color: #234b33;
+    margin-bottom: 2rem;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="demo-title">Flip Card Component — Pure HTML/CSS/JS</h1>
+
+<div class="demo-grid">
+
+  <!-- ========== VARIANT 1: Lead Capture Form ========== -->
+  <div class="flip-card" id="flip-lead">
+    <div class="flip-inner">
+      <!-- FRONT -->
+      <div class="flip-front">
+        <div class="flip-illustration flip-illus-pine">🏠</div>
+        <h2 class="flip-title">Get Your Free Inspection</h2>
+        <p class="flip-desc">Worried about moisture under your home? Fill out our quick form and we'll inspect your crawl space at no cost.</p>
+        <div class="flip-features">
+          <span>Same-day response available</span>
+          <span>No-obligation written quote</span>
+          <span>Transferable warranty included</span>
+        </div>
+        <button class="flip-btn flip-btn-primary" onclick="flipCard('flip-lead', true)">
+          Request Free Inspection →
+        </button>
+      </div>
+      <!-- BACK (form) -->
+      <div class="flip-back">
+        <h3 class="flip-back-title">Book Your Free Inspection</h3>
+        <p class="flip-back-desc">We'll call within the hour to schedule.</p>
+        <form class="flip-form" onsubmit="handleFormSubmit(event, 'flip-lead')">
+          <label for="fl-name">Full Name</label>
+          <input id="fl-name" name="name" type="text" placeholder="Your name" required>
+          <label for="fl-phone">Phone Number</label>
+          <input id="fl-phone" name="phone" type="tel" placeholder="(XXX) XXX-XXXX" required>
+          <label for="fl-city">City</label>
+          <input id="fl-city" name="city" type="text" placeholder="Roanoke, Salem, Vinton..." required>
+          <p class="flip-error" style="display:none">Please fill all fields.</p>
+          <button type="submit" class="flip-btn flip-btn-primary">Send My Request</button>
+          <button type="button" class="flip-back-link" onclick="flipCard('flip-lead', false)">← Back</button>
+        </form>
+      </div>
+      <!-- SUCCESS -->
+      <div class="flip-success">
+        <div class="flip-illustration">✓</div>
+        <h2 class="flip-title">Request Received!</h2>
+        <p class="flip-desc">We'll call you shortly to schedule your free inspection. No pressure, no obligation.</p>
+        <button class="flip-btn flip-btn-pine" onclick="flipReset('flip-lead')">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== VARIANT 2: Pricing Reveal ========== -->
+  <div class="flip-card" id="flip-price">
+    <div class="flip-inner">
+      <div class="flip-front">
+        <div class="flip-illustration flip-illus-clay">💰</div>
+        <h2 class="flip-title">What Does Encapsulation Cost?</h2>
+        <p class="flip-desc">Pricing depends on your home's size and condition. Tap to see honest price ranges from real Roanoke Valley jobs.</p>
+        <div class="flip-features">
+          <span>Free on-site estimate</span>
+          <span>No hidden fees ever</span>
+          <span>Financing available</span>
+        </div>
+        <button class="flip-btn flip-btn-primary" onclick="flipCard('flip-price', true)">
+          See Pricing →
+        </button>
+      </div>
+      <div class="flip-back">
+        <h3 class="flip-back-title">2026 Price Ranges</h3>
+        <p class="flip-back-desc">Real numbers from real Roanoke Valley projects.</p>
+        <div style="width:100%;display:flex;flex-direction:column;gap:0.75rem">
+          <div style="background:#fff;padding:0.875rem 1rem;border-radius:0.5rem;border:1.5px solid rgba(35,75,51,0.12)">
+            <strong style="color:#234b33">Basic Seal</strong>
+            <span style="float:right;color:#c0673a;font-weight:700">$2,000 – $4,500</span>
+            <p style="margin:0.25rem 0 0;font-size:0.85rem;color:#5a6e5f">Vapor barrier on floor. 1 day.</p>
+          </div>
+          <div style="background:#f3ead9;padding:0.875rem 1rem;border-radius:0.5rem;border:2px solid #c0673a">
+            <strong style="color:#234b33">Full Encapsulation</strong>
+            <span style="float:right;color:#c0673a;font-weight:700">$5,000 – $8,000</span>
+            <p style="margin:0.25rem 0 0;font-size:0.85rem;color:#5a6e5f">★ Most chosen. Floor + walls + dehumidifier.</p>
+          </div>
+          <div style="background:#fff;padding:0.875rem 1rem;border-radius:0.5rem;border:1.5px solid rgba(35,75,51,0.12)">
+            <strong style="color:#234b33">Premium System</strong>
+            <span style="float:right;color:#c0673a;font-weight:700">$8,000 – $15,000</span>
+            <p style="margin:0.25rem 0 0;font-size:0.85rem;color:#5a6e5f">Encapsulation + drainage + sump pump.</p>
+          </div>
+          <button type="button" class="flip-back-link" onclick="flipCard('flip-price', false)">← Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== VARIANT 3: Before/After Comparison ========== -->
+  <div class="flip-card" id="flip-compare">
+    <div class="flip-inner">
+      <div class="flip-front" style="background:#fff5f0;border-color:rgba(192,103,58,0.2)">
+        <div class="flip-illustration flip-illus-clay">⚠️</div>
+        <h2 class="flip-title">Before Encapsulation</h2>
+        <p class="flip-desc">Dirt floor. Open vents. 70%+ humidity. Mold, musty odors, sagging floors.</p>
+        <div class="flip-features">
+          <span style="color:#c0673a">Mold on floor joists</span>
+          <span style="color:#c0673a">Musty smell upstairs</span>
+          <span style="color:#c0673a">High energy bills</span>
+        </div>
+        <button class="flip-btn flip-btn-primary" onclick="flipCard('flip-compare', true)">
+          See the Solution →
+        </button>
+      </div>
+      <div class="flip-back" style="background:#f0f7f2;border-color:rgba(35,75,51,0.2)">
+        <h3 class="flip-back-title" style="color:#2f6243">After Encapsulation</h3>
+        <p class="flip-back-desc" style="color:#3d6b4a">Sealed, dry, conditioned foundation.</p>
+        <div class="flip-features">
+          <span>✓ Clean, sealed vapor barrier</span>
+          <span>✓ Humidity locked under 50%</span>
+          <span>✓ Lower energy bills (15-20%)</span>
+          <span>✓ No mold, no musty smell</span>
+          <span>✓ Transferable warranty</span>
+        </div>
+        <button type="button" class="flip-back-link" onclick="flipCard('flip-compare', false)">← Back</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/**
+ * Flip Card Controller — vanilla JS, zero dependencies.
+ * 
+ * Usage:
+ *   flipCard('card-id', true)   → flip to back/form
+ *   flipCard('card-id', false)  → flip to front
+ *   flipReset('card-id')        → reset to front (after success)
+ *   handleFormSubmit(event, 'card-id') → handle form, show success
+ */
+
+function flipCard(id, toBack) {
+  var card = document.getElementById(id);
+  if (!card) return;
+  if (toBack) {
+    card.classList.add('flipped');
+    card.classList.remove('flip-success');
+  } else {
+    card.classList.remove('flipped', 'flip-success');
+  }
+}
+
+function flipReset(id) {
+  var card = document.getElementById(id);
+  if (!card) return;
+  card.classList.remove('flipped', 'flip-success');
+  
+  // Reset form
+  var form = card.querySelector('.flip-form');
+  if (form) form.reset();
+  
+  // Hide errors
+  var err = card.querySelector('.flip-error');
+  if (err) err.style.display = 'none';
+}
+
+function handleFormSubmit(event, id) {
+  event.preventDefault();
+  var card = document.getElementById(id);
+  if (!card) return;
+  
+  var form = card.querySelector('.flip-form');
+  var btn = form.querySelector('button[type="submit"]');
+  var err = card.querySelector('.flip-error');
+  
+  // Basic validation
+  var inputs = form.querySelectorAll('input[required]');
+  var valid = true;
+  inputs.forEach(function(inp) {
+    if (!inp.value.trim()) valid = false;
+  });
+  
+  if (!valid) {
+    if (err) err.style.display = 'block';
+    return;
+  }
+  
+  if (err) err.style.display = 'none';
+  
+  // Show loading
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Sending...';
+  
+  // Gather data
+  var data = {};
+  inputs.forEach(function(inp) {
+    data[inp.name] = inp.value;
+  });
+  
+  // Submit to Formspree (replace with actual endpoint)
+  var formAction = form.action || 'https://formspree.io/f/xwvjpany';
+  fetch(formAction, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(form)
+  })
+  .then(function(res) {
+    btn.disabled = false;
+    btn.textContent = 'Send My Request';
+    if (res.ok) {
+      card.classList.remove('flipped');
+      card.classList.add('flip-success');
+    }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Send My Request';
+    // Still show success for demo — in production, show error
+    card.classList.remove('flipped');
+    card.classList.add('flip-success');
+  });
+  
+  return false;
+}
+</script>
+
+</body>
+</html>
