@@ -236,7 +236,6 @@ function handleFormSubmit(event, id) {
     btn.disabled = false;
     btn.textContent = 'Send My Request';
     if (res.ok) {
-      card.classList.remove('flipped');
       card.classList.add('flip-success');
     }
   })
@@ -244,7 +243,6 @@ function handleFormSubmit(event, id) {
     btn.disabled = false;
     btn.textContent = 'Send My Request';
     // Still show success for demo — in production, show error
-    card.classList.remove('flipped');
     card.classList.add('flip-success');
   });
   

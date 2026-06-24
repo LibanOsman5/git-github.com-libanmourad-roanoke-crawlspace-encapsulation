@@ -29,13 +29,8 @@
   transform-style: preserve-3d;
 }
 
-.flip-card.flipped .flip-inner,
-.flip-card.flip-success .flip-inner {
+.flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
-}
-
-.flip-card.flip-success .flip-inner {
-  transform: rotateY(360deg);
 }
 
 /* --- Faces --- */
@@ -153,6 +148,24 @@
   justify-content: flex-start;
 }
 
+/* --- Success face (also at 180deg, toggled via opacity) --- */
+.flip-success {
+  transform: rotateY(180deg);
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+}
+
+.flip-card.flip-success .flip-back {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.flip-card.flip-success .flip-success {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .flip-back .flip-back-title {
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 1.25rem;
@@ -212,11 +225,7 @@
   margin: 0;
 }
 
-/* --- Success face --- */
-.flip-success {
-  transform: rotateY(360deg);
-  text-align: center;
-}
+/* --- Success face child styles (after opacity toggle) --- */
 
 .flip-success .flip-illustration {
   width: 5rem;

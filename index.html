@@ -571,7 +571,6 @@ function handleFormSubmit(event, id) {
       btn.disabled = false;
       btn.textContent = origText;
       if (res.ok) {
-        card.classList.remove('flipped');
         card.classList.add('flip-success');
         if (typeof gtag === 'function') gtag('event', 'generate_lead', { transport_type: 'beacon' });
         if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead' });
@@ -580,7 +579,6 @@ function handleFormSubmit(event, id) {
     .catch(function() {
       btn.disabled = false;
       btn.textContent = origText;
-      card.classList.remove('flipped');
       card.classList.add('flip-success');
     });
   return false;
